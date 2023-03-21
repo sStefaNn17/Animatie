@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animatie</title>
+    <style>
+      body {
+         margin: 0;
+         background-color: #050210;
+      }
+      #cerc{
+        display:inline-block;
+        position: absolute;
+        margin:0 auto;
+        top:200px;
+        left:0;
+        right:0;
+        bottom:0;
+        height:400px;
+        width: 400px;
+        border:10px;
+        background:linear-gradient(#fb5dad, #55fb9f, #b97aff) ;
+       
+        border-radius: 100%;
+        animation: rotation 5s linear infinite;
+        
+      }
+     
+      #cerc::before{
+        position:absolute;
+        content:'';
+        width: 375px;
+        height: 375px;
+        left:10px;
+        right: 10px;
+        bottom:10px;
+        top:10px;
+        background:#050210;
+        
+
+       border-radius: 100%;
+      }
+      @keyframes rotation  {
+       from{
+        transform:rotate(0deg);
+       }
+        to{
+          transform: rotate(360deg);
+        }
+      }
+      #glow{
+        position:absolute;
+        content:'';
+        width:450px;
+        height:450px;
+        left:0;
+        right:0;
+        bottom:0;
+        top:175px;
+        margin: 0 auto;
+       
+        background:linear-gradient(#fb5dad, #55fb9f, #b97aff);
+        opacity:0.6;
+        border-radius:100%;
+        filter: blur(10px);
+        animation: rotation 5s linear infinite;
+    
+
+      }
+      #glow::before{
+        position:absolute;
+        content:'';
+        width: 350px;
+        height: 350px;
+        left:50px;
+        right:50px;
+        bottom:50px;
+        top:50px;
+        background:#050210;
+        border-radius:100%;
+        
+      
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div id="cerc"></div>
+    <div id="glow"></div>
+    
+    
+  </body>
+</html>
